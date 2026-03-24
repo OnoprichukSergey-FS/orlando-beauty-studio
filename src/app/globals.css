@@ -516,6 +516,9 @@ h4 {
   grid-template-columns: repeat(4, 1fr);
   gap: 22px;
 }
+.contact-card a {
+  transition: 0.25s ease;
+}
 
 .contact-card {
   background: var(--card);
@@ -566,6 +569,42 @@ h4 {
   height: 520px;
   border: none;
   display: block;
+}
+
+.connect-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.social-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-decoration: none;
+  padding: 12px 16px;
+  background: #f8f5f1;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition: 0.25s ease;
+}
+
+.social-pill:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* ================= GALLERY ================= */

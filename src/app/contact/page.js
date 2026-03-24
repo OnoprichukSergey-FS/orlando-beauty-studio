@@ -42,23 +42,39 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="contact-card">
+            <div className="contact-card connect-card">
               <div className="contact-icon">🤍</div>
               <h3>CONNECT</h3>
-              <div className="social-links">
+
+              <div className="social-links social-links-column">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/orlando_beauty_studio?igsh=MXhqNHJ2djc1d3Mxbg%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="social-pill"
                 >
-                  Instagram
+                  <span>Instagram</span>
+                  <span>↗</span>
                 </a>
+
                 <a
-                  href="https://facebook.com"
+                  href="https://www.tiktok.com/@orlando.beauty.studio?_r=1&_t=ZT-94y5eJ0vwS5"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="social-pill"
                 >
-                  Facebook
+                  <span>TikTok</span>
+                  <span>↗</span>
+                </a>
+
+                <a
+                  href="https://www.google.com/maps?q=Orlando+Beauty+Studio+-+SPA+%26+Face+Treatments,+1430+Lake+Baldwin+Ln,+Orlando,+FL+32814&ftid=0x88e765e437cc91b3:0x364e5a9792365aba&entry=gps&shh=CAE&lucs=,94297699,94284508,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI2LjExLjEuODgxMDA1NjQ2MBgAIIgnKkgsOTQyOTc2OTksOTQyODQ1MDgsOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsOTQyODY4NjlCAlVT&skid=1d69eb73-2a79-4dfa-9494-e45351d41919&g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-pill"
+                >
+                  <span>Google</span>
+                  <span>↗</span>
                 </a>
               </div>
             </div>
