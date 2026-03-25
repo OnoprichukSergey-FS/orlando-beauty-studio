@@ -1,3 +1,4 @@
+import Reviews from "../components/Reviews";
 export default function Home() {
   return (
     <>
@@ -129,87 +130,8 @@ export default function Home() {
       </section> */}
 
       {/* ================= REVIEWS ================= */}
-      <section className="reviews">
-        <div className="container">
-          <div className="section-head center">
-            <h2>Client Reviews</h2>
-            <p className="subtext">Real client feedback from Google reviews.</p>
-          </div>
+      <Reviews />
 
-          <div className="reviews-grid">
-            <div className="review-card">
-              <div className="stars">★★★★★</div>
-              <p>
-                “Absolutely amazing lymphatic massage for the body and face. The
-                products were gentle on my skin, and the experience felt deeply
-                relaxing and restorative.”
-              </p>
-              <span className="reviewer">— Fayza J.</span>
-            </div>
-
-            <div className="review-card">
-              <div className="stars">★★★★★</div>
-              <p>
-                “I had a signature facial massage and it was a wonderful
-                experience. My face felt clean and smooth, and I really
-                appreciated the thoughtful recommendations for my routine.”
-              </p>
-              <span className="reviewer">— Jorge P.</span>
-            </div>
-
-            <div className="review-card">
-              <div className="stars">★★★★★</div>
-              <p>
-                “Peaceful atmosphere, relaxing music, and amazing service. After
-                my facial, my skin looked smooth and radiant, and I always enjoy
-                coming back for facials and sugaring.”
-              </p>
-              <span className="reviewer">— Yuliia T.</span>
-            </div>
-
-            <div className="review-card">
-              <div className="stars">★★★★★</div>
-              <p>
-                “Julia is the best. From the moment I walked in, I felt
-                comfortable. The whole experience was calming, welcoming, and
-                exactly the kind of care you want during a treatment.”
-              </p>
-              <span className="reviewer">— Chiara C.</span>
-            </div>
-
-            <div className="review-card">
-              <div className="stars">★★★★★</div>
-              <p>
-                “My boyfriend booked me a facial for Valentine’s Day and it did
-                not disappoint. It was incredibly relaxing, and I left with my
-                skin feeling softer and cleaner than ever.”
-              </p>
-              <span className="reviewer">— Hannah M.</span>
-            </div>
-
-            <div className="review-card">
-              <div className="stars">★★★★★</div>
-              <p>
-                “Highly recommend Orlando Beauty Studio. The facial and
-                Hollywood lifting massage were incredible, and the overall
-                experience felt professional, warm, and truly special.”
-              </p>
-              <span className="reviewer">— Diesel 2012</span>
-            </div>
-          </div>
-
-          <div className="center top-space">
-            <a
-              className="btn-outline"
-              href="https://www.google.com/search?q=orlando+beauty+studio#lrd=0x88e765e437cc91b3:0x364e5a9792365aba,1,,,,"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View More on Google
-            </a>
-          </div>
-        </div>
-      </section>
       {/* ================= CTA ================= */}
       <section className="cta">
         <div className="container center">
