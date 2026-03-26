@@ -19,8 +19,14 @@ export default function ContactPage() {
               <div className="contact-icon">📍</div>
               <h3>ADDRESS</h3>
               <p>
-                1430 Lake Baldwin Ln <br />
-                Orlando, FL
+                <a
+                  href="https://www.google.com/maps?q=1430+Lake+Baldwin+Ln+Orlando+FL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  1430 Lake Baldwin Ln <br />
+                  Orlando, FL
+                </a>
               </p>
             </div>
 
