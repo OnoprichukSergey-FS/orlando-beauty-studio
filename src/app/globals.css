@@ -713,7 +713,234 @@ h4 {
   border-radius: 8px;
   display: block;
 }
+/* ================= SERVICES PAGE ================= */
 
+.services-page {
+  padding: 80px 0 120px;
+  background: #f3efeb;
+}
+
+.services-container {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.services-hero {
+  padding: 30px 0 20px;
+}
+
+.services-kicker {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8b747b;
+  margin-bottom: 10px;
+}
+
+.services-hero h1 {
+  font-size: 68px;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.services-subtext {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6d6662;
+}
+
+.services-sections {
+  margin-top: 42px;
+}
+
+.service-category {
+  margin-top: 56px;
+}
+
+.service-category h2 {
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* STACKED ROWS */
+.service-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px;
+  gap: 32px;
+  align-items: start;
+  padding: 0 0 22px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.service-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* LEFT */
+.service-row-left h3 {
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 0.6px;
+  margin-bottom: 12px;
+  text-transform: none;
+}
+
+.service-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #544e4a;
+  margin-bottom: 10px;
+}
+
+.service-extra {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #544e4a;
+  margin-top: 12px;
+}
+
+.service-note {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #8d6a73;
+  margin: -4px 0 8px;
+}
+
+.service-list {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.service-list li {
+  margin-bottom: 6px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #5d5753;
+}
+
+/* RIGHT */
+.service-row-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-top: 4px;
+}
+
+.service-duration {
+  font-size: 16px;
+  color: #5f5955;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.service-price {
+  font-size: 28px;
+  line-height: 1;
+  color: #8d6a73;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* BUTTON */
+.services-page .btn-primary {
+  min-width: 190px;
+  text-align: center;
+}
+
+/* TABLET */
+@media (max-width: 980px) {
+  .services-hero h1 {
+    font-size: 54px;
+  }
+
+  .service-category h2 {
+    font-size: 26px;
+  }
+
+  .service-row {
+    grid-template-columns: 1fr 120px;
+    gap: 22px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 70px 0 90px;
+  }
+
+  .services-hero {
+    padding: 10px 0 8px;
+  }
+
+  .services-hero h1 {
+    font-size: 42px;
+  }
+
+  .services-subtext {
+    font-size: 15px;
+  }
+
+  .service-category {
+    margin-top: 42px;
+  }
+
+  .service-category h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-bottom: 18px;
+  }
+
+  .service-row-right {
+    align-items: flex-start;
+    padding-top: 0;
+  }
+
+  .service-row-left h3 {
+    font-size: 18px;
+  }
+
+  .service-description,
+  .service-extra {
+    font-size: 15px;
+  }
+
+  .service-list li {
+    font-size: 14px;
+  }
+
+  .service-duration {
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+
+  .service-price {
+    font-size: 24px;
+  }
+}
 /* ================= FOOTER ================= */
 .footer {
   background: var(--dark);
