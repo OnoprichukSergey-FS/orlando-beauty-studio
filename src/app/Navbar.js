@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -10,9 +11,15 @@ export default function Navbar() {
     <>
       <header className="site-header">
         <div className="nav-inner">
-          {/* LOGO (always goes to Home) */}
+          {/* LOGO */}
           <Link href="/" className="logo">
-            Orlando Beauty Studio
+            <Image
+              src="/logo.png"
+              alt="Orlando Beauty Studio"
+              width={160}
+              height={50}
+              priority
+            />
           </Link>
 
           {/* DESKTOP NAV */}
@@ -42,7 +49,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* DARK OVERLAY */}
+      {/* OVERLAY */}
       <div
         className={`menu-overlay ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(false)}
@@ -50,12 +57,10 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div className={`mobile-drawer ${menuOpen ? "open" : ""}`}>
-        {/* CLOSE BUTTON */}
         <button className="mobile-close" onClick={() => setMenuOpen(false)}>
           ✕
         </button>
 
-        {/* MOBILE NAV */}
         <nav className="mobile-nav">
           <Link href="/about" onClick={() => setMenuOpen(false)}>
             About
@@ -77,7 +82,6 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* MOBILE BOOKING BUTTON */}
         <a
           href="https://www.vagaro.com/juliabeauty"
           target="_blank"
