@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link href="/services">Services</Link>
             <Link href="/gift-cards">Gift Cards</Link>
             <Link href="/beauty-school">Beauty School</Link>
-            <Link href="/press">Press</Link>
+
             <Link href="/contact">Contact</Link>
           </nav>
 
@@ -74,9 +74,7 @@ export default function Navbar() {
           <Link href="/beauty-school" onClick={() => setMenuOpen(false)}>
             Beauty School
           </Link>
-          <Link href="/press" onClick={() => setMenuOpen(false)}>
-            Press
-          </Link>
+
           <Link href="/contact" onClick={() => setMenuOpen(false)}>
             Contact
           </Link>

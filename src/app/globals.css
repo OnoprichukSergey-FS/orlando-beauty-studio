@@ -946,6 +946,687 @@ h4 {
     font-size: 24px;
   }
 }
+
+/* ================= GIFT CARDS PAGE ================= */
+
+.gift-cards-page {
+  padding: 90px 0 120px;
+  background: #f3efeb;
+}
+
+.gift-cards-container {
+  max-width: 1120px;
+}
+
+.gift-cards-hero {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.gift-cards-kicker {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8b747b;
+  margin-bottom: 10px;
+}
+
+.gift-cards-hero h1 {
+  font-size: 68px;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.gift-cards-subtext {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #6d6662;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.gift-cards-intro {
+  margin-top: 50px;
+}
+
+.gift-cards-intro-card {
+  background: linear-gradient(135deg, #f8f5f2 0%, #eee7e1 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 42px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(40, 28, 22, 0.05);
+}
+
+.gift-cards-intro-card h2 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.gift-cards-intro-card p {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  color: #5e5752;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.gift-cards-grid {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.gift-card-item {
+  background: #f8f5f2;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  min-height: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(34, 24, 18, 0.08);
+}
+
+.gift-card-item.featured {
+  background: linear-gradient(135deg, #f8f5f2 0%, #efe4e6 100%);
+  border-color: rgba(141, 106, 115, 0.16);
+}
+
+.gift-card-image-wrap {
+  background: #efe7e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.gift-card-image {
+  width: 100%;
+  max-width: 145px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.gift-card-content {
+  padding: 28px 28px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gift-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.gift-card-top h3 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.gift-card-price {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.gift-card-description {
+  color: #58514d;
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+
+.gift-card-note {
+  color: #7a726d;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.gift-card-btn {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: 0.25s ease;
+}
+
+.gift-card-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.gift-cards-bottom {
+  margin-top: 54px;
+}
+
+.gift-cards-bottom p {
+  color: #625b57;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.gift-cards-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 980px) {
+  .gift-cards-hero h1 {
+    font-size: 54px;
+  }
+
+  .gift-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gift-cards-page {
+    padding: 70px 0 90px;
+  }
+
+  .gift-cards-hero h1 {
+    font-size: 42px;
+  }
+
+  .gift-cards-subtext {
+    font-size: 15px;
+  }
+
+  .gift-cards-intro-card {
+    padding: 30px 22px;
+    border-radius: 14px;
+  }
+
+  .gift-cards-intro-card h2 {
+    font-size: 24px;
+  }
+
+  .gift-card-item {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-card-image-wrap {
+    padding: 20px 20px 10px;
+  }
+
+  .gift-card-image {
+    max-width: 140px;
+  }
+
+  .gift-card-content {
+    padding: 18px 20px 24px;
+  }
+
+  .gift-card-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .gift-card-top h3 {
+    font-size: 20px;
+  }
+
+  .gift-card-price {
+    font-size: 28px;
+  }
+}
+
+/* ================= BEAUTY SCHOOL PAGE ================= */
+
+.beauty-school-page {
+  padding: 80px 0 120px;
+  background: #f3efeb;
+}
+
+.beauty-school-container {
+  max-width: 1180px;
+}
+
+.beauty-school-kicker,
+.beauty-school-small-heading {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8b747b;
+  margin-bottom: 12px;
+}
+
+.beauty-school-hero {
+  padding: 30px 0 30px;
+}
+
+.beauty-school-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.beauty-school-hero-text h1 {
+  font-size: 62px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.beauty-school-hero-text h2 {
+  font-size: 26px;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  max-width: 700px;
+}
+
+.beauty-school-lead {
+  font-size: 18px;
+  line-height: 1.85;
+  color: #544e4a;
+  max-width: 760px;
+}
+
+.beauty-school-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.center-actions {
+  justify-content: center;
+}
+
+.beauty-school-hero-visual img,
+.beauty-school-feature img,
+.beauty-school-section-image img,
+.beauty-school-results-images img,
+.beauty-school-gallery-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.beauty-school-hero-visual img {
+  height: 520px;
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(26, 26, 26, 0.08);
+}
+
+.beauty-school-feature {
+  margin-top: 24px;
+}
+
+.beauty-school-feature img {
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgba(26, 26, 26, 0.06);
+}
+
+/* VIDEO */
+.beauty-school-video-section {
+  margin-top: 42px;
+}
+
+.beauty-school-video-card {
+  background: linear-gradient(135deg, #f8f5f2 0%, #eee7e1 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: 0 18px 40px rgba(34, 24, 18, 0.05);
+}
+
+.beauty-school-video-text {
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+
+.beauty-school-video-text h3 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.beauty-school-video-text p {
+  color: #5b5551;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.beauty-school-video-wrap {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #000;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.beauty-school-video {
+  width: 100%;
+  display: block;
+  max-height: 760px;
+  background: #000;
+}
+
+/* INTRO */
+.beauty-school-intro {
+  margin-top: 42px;
+}
+
+.beauty-school-intro-card,
+.beauty-school-note-card,
+.beauty-school-cta-card {
+  background: #f8f5f2;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 12px 30px rgba(26, 26, 26, 0.04);
+}
+
+.beauty-school-intro-card h3,
+.beauty-school-note-card h3,
+.beauty-school-cta-card h3 {
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+
+.beauty-school-intro-card p,
+.beauty-school-note-card p,
+.beauty-school-cta-card p {
+  color: #544e4a;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.beauty-school-intro-card p + p,
+.beauty-school-note-card p + p,
+.beauty-school-cta-card p + p {
+  margin-top: 12px;
+}
+
+/* CONTENT SECTIONS */
+.beauty-school-section {
+  margin-top: 58px;
+}
+
+.beauty-school-section.alt {
+  margin-top: 42px;
+}
+
+.beauty-school-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.beauty-school-section-grid.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.beauty-school-section-text h3 {
+  font-size: 40px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.beauty-school-section-text p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #544e4a;
+}
+
+.beauty-school-section-text p + p {
+  margin-top: 14px;
+}
+
+.beauty-school-section-image img {
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(26, 26, 26, 0.07);
+}
+
+.circle-image img {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+/* LIST BLOCK */
+.beauty-school-list-block {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.beauty-school-list-block h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.beauty-school-list-block ul {
+  padding-left: 20px;
+}
+
+.beauty-school-list-block li {
+  color: #58524d;
+  line-height: 1.9;
+  margin-bottom: 4px;
+}
+
+/* RESULTS */
+.beauty-school-results {
+  margin-top: 58px;
+}
+
+.beauty-school-results-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 46px;
+  align-items: start;
+}
+
+.beauty-school-results-text h3 {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.beauty-school-results-list {
+  list-style: none;
+  padding: 0;
+}
+
+.beauty-school-results-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 18px;
+  color: #544e4a;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.beauty-school-results-list li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+
+.beauty-school-results-images {
+  display: grid;
+  gap: 18px;
+}
+
+.beauty-school-results-images img:first-child {
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(26, 26, 26, 0.08);
+}
+
+.beauty-school-results-images img:last-child {
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(26, 26, 26, 0.08);
+}
+
+/* PHILOSOPHY */
+.beauty-school-philosophy {
+  margin-top: 62px;
+}
+
+.beauty-school-philosophy h3 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.beauty-school-philosophy-text {
+  max-width: 920px;
+  margin: 0 auto 16px;
+  text-align: center;
+  color: #544e4a;
+  font-size: 18px;
+  line-height: 1.95;
+}
+
+.beauty-school-philosophy-gallery {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.beauty-school-gallery-item img {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  box-shadow: 0 14px 34px rgba(26, 26, 26, 0.08);
+}
+
+/* NOTE + CTA */
+.beauty-school-orlando-note,
+.beauty-school-cta {
+  margin-top: 54px;
+}
+
+.beauty-school-cta-card {
+  padding: 40px 32px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .beauty-school-hero-grid,
+  .beauty-school-section-grid,
+  .beauty-school-results-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .beauty-school-hero-text h1 {
+    font-size: 48px;
+  }
+
+  .beauty-school-hero-text h2 {
+    font-size: 24px;
+  }
+
+  .beauty-school-section-text h3,
+  .beauty-school-results-text h3,
+  .beauty-school-philosophy h3,
+  .beauty-school-intro-card h3,
+  .beauty-school-note-card h3,
+  .beauty-school-cta-card h3,
+  .beauty-school-video-text h3 {
+    font-size: 32px;
+  }
+
+  .beauty-school-philosophy-gallery {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .beauty-school-page {
+    padding: 70px 0 90px;
+  }
+
+  .beauty-school-hero {
+    padding: 10px 0 20px;
+  }
+
+  .beauty-school-hero-text h1 {
+    font-size: 40px;
+  }
+
+  .beauty-school-hero-text h2 {
+    font-size: 22px;
+  }
+
+  .beauty-school-lead,
+  .beauty-school-section-text p,
+  .beauty-school-intro-card p,
+  .beauty-school-note-card p,
+  .beauty-school-cta-card p,
+  .beauty-school-philosophy-text {
+    font-size: 15px;
+  }
+
+  .beauty-school-results-list li {
+    font-size: 16px;
+  }
+
+  .beauty-school-hero-visual img,
+  .beauty-school-feature img,
+  .beauty-school-section-image img,
+  .beauty-school-results-images img:first-child,
+  .beauty-school-results-images img:last-child {
+    border-radius: 18px;
+  }
+
+  .beauty-school-intro-card,
+  .beauty-school-note-card,
+  .beauty-school-cta-card,
+  .beauty-school-video-card {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .beauty-school-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .beauty-school-actions .btn-primary,
+  .beauty-school-actions .btn-outline {
+    text-align: center;
+  }
+}
+
 /* ================= FOOTER ================= */
 .footer {
   background: var(--dark);
