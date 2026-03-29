@@ -135,7 +135,7 @@ export default function Home() {
       {/* ================= CTA ================= */}
       <section className="cta">
         <div className="container center">
-          <h2>Ready to Feel Confident in Your Skin?</h2>
+          <h2>Ready to Feel in Harmony with your skin?</h2>
           <p>
             Book online in seconds — choose a service and pick a time that works
             for you.
