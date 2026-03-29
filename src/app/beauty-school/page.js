@@ -33,10 +33,12 @@ export default function BeautySchoolPage() {
 
         {/* FEATURED TRAINING IMAGE */}
         <section className="beauty-school-feature">
-          <img
-            src="/IMG_3310.JPG"
-            alt="Hollywood Lifting Facial Massage training presentation"
-          />
+          <div className="beauty-school-feature-inner">
+            <img
+              src="/IMG_5128.JPG"
+              alt="Students holding certificates at Orlando Beauty Studio training"
+            />
+          </div>
         </section>
 
         {/* VIDEO */}
@@ -216,14 +218,22 @@ export default function BeautySchoolPage() {
           </p>
 
           <div className="beauty-school-philosophy-gallery">
+            {/* VIDEO */}
             <div className="beauty-school-gallery-item">
-              <img src="/IMG_3314.JPG" alt="Hands-on manual technique" />
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                className="beauty-school-video"
+              >
+                <source src="/videos/IMG_6164.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
+
+            {/* NEW IMAGE (the certificate group photo you sent) */}
             <div className="beauty-school-gallery-item">
-              <img src="/IMG_3310.JPG" alt="Training demonstration" />
-            </div>
-            <div className="beauty-school-gallery-item">
-              <img src="/IMG_3311.JPG" alt="Instructor and training method" />
+              <img src="/IMG_5131.JPG" alt="Training certification students" />
             </div>
           </div>
         </section>
