@@ -1631,7 +1631,7 @@ h4 {
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .logo img {
-    height: 42px;
+    height: 82px;
   }
 
   .nav-links {
