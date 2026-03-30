@@ -832,6 +832,13 @@ h4 {
   display: block;
 }
 
+/* 👇 DESKTOP ADJUSTMENT */
+@media (min-width: 1024px) {
+  .packages-image {
+    max-width: 560px; /* was 720px */
+  }
+}
+
 /* ================= GIFT CARDS PAGE ================= */
 .gift-cards-page {
   padding: 90px 0 120px;
