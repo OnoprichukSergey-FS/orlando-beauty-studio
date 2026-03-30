@@ -1,4 +1,5 @@
 import Reviews from "../components/Reviews";
+
 export default function Home() {
   return (
     <>
@@ -75,9 +76,16 @@ export default function Home() {
           </div>
 
           <div className="about-visual">
-            {/* MAIN IMAGE */}
+            {/* MAIN VIDEO */}
             <div className="about-main-image">
-              <img src="/about1.JPG" alt="Facial treatment" />
+              <video
+                src="/videos/IMG_4521.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="about-main-video"
+              />
             </div>
 
             {/* SMALL BOTTOM LEFT */}
@@ -85,49 +93,13 @@ export default function Home() {
               <img src="/about2.JPG" alt="Client experience" />
             </div>
 
-            {/* NEW TOP RIGHT IMAGE */}
+            {/* SMALL TOP RIGHT IMAGE */}
             <div className="about-third-image">
               <img src="/about3.jpg" alt="Orlando Beauty Studio" />
             </div>
           </div>
         </div>
       </section>
-
-      {/* ================= FEATURED SERVICES =================
-      <section className="services">
-        <div className="container">
-          <div className="section-head center">
-            <h2>Featured Services</h2>
-            <p className="subtext">
-              A curated selection of treatments designed for visible results and
-              deep relaxation.
-            </p>
-          </div>
-
-          <div className="services-grid">
-            <div className="service-card">
-              <img src="/g1.jpg" alt="Sugaring service" />
-              <h3>Sugaring</h3>
-              <p>Gentle hair removal for smooth, clean skin.</p>
-              <a href="/services">Learn More</a>
-            </div>
-
-            <div className="service-card">
-              <img src="/g2.jpg" alt="Advanced skincare service" />
-              <h3>Advanced Skincare</h3>
-              <p>Customized treatments tailored to your skin&apos;s needs.</p>
-              <a href="/services">Learn More</a>
-            </div>
-
-            <div className="service-card">
-              <img src="/g3.jpg" alt="Holistic facial treatment" />
-              <h3>Holistic Treatments</h3>
-              <p>Professional care using safe, natural techniques.</p>
-              <a href="/services">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* ================= REVIEWS ================= */}
       <Reviews />

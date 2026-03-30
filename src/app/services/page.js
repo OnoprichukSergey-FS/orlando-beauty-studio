@@ -409,6 +409,14 @@ export default function ServicesPage() {
           </div>
         </div>
 
+        <div className="packages-section">
+          <img
+            src="/packages.jpg"
+            alt="Treatment Packages"
+            className="packages-image"
+          />
+        </div>
+
         <div className="services-sections">
           {servicesData.map((section) => (
             <section className="service-category" key={section.category}>
