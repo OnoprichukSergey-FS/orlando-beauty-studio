@@ -6,6 +6,7 @@ const servicesData = [
         name: "Hollywood Lifting Express 30 mins",
         duration: "30 min",
         price: "$80",
+        image: "/services/hollywood-lifting-express.jpg",
         description:
           "A quick lifting treatment for instant glow and sculpted look — in just 30 minutes. Perfect before an event or for a fast skin refresh.",
         details: [
@@ -19,6 +20,7 @@ const servicesData = [
         name: "Hollywood Lifting Massage",
         duration: "90 min",
         price: "$160",
+        image: "/services/hollywood-lifting-massage.jpg",
         description:
           "A signature sculpting treatment designed to lift, tone, and restore natural facial structure. This treatment includes deep work on the face, neck, and décolleté, combining lifting techniques, lymphatic drainage, and targeted muscle and fascia release.",
         details: [
@@ -38,6 +40,7 @@ const servicesData = [
         name: "Hollywood Lifting Ritual",
         duration: "135 min",
         price: "$220",
+        image: "/services/hollywood-lifting-ritual.jpg",
         description:
           "A complete lifting ritual designed to deeply sculpt, renew, and restore your skin. This advanced treatment combines our signature Hollywood Lifting Massage with professional skincare steps for maximum visible results and long-lasting glow.",
         details: [
@@ -63,6 +66,7 @@ const servicesData = [
         name: "Hydradermie Lift (microcurrent) + Hollywood Massage",
         duration: "140 min",
         price: "$320",
+        image: "/services/guinot-advanced-facials.jpg",
         description:
           "An exclusive patented technique that gives the face a youthful appearance and ensures the clarity of the contours of the face due to the strengthening of facial muscles. This procedure is an alternative to the methods of aesthetic medicine aimed at instantly reducing the manifestations of skin aging.",
         details: ["Anti-aging drainage", "Myostimulation", "Modeling massage"],
@@ -71,6 +75,7 @@ const servicesData = [
         name: "Guinot Hydradermie (microcurrent)",
         duration: "90 min",
         price: "$190",
+        image: "/services/guinot-advanced-facials.jpg",
         description:
           "The Hydraderm device is an innovative intelligent device for facial skin rejuvenation. The Guinot Institute (France) has created a unique patented device using the latest smart technologies and innovations - Hydraderm Cellular Energy, whose effect is able to restore the cellular energy of young skin.",
         extra:
@@ -106,6 +111,7 @@ const servicesData = [
         name: "Hollywood Glow: DMK Enzyme Therapy & Lift Massage",
         duration: "120 min",
         price: "$280",
+        image: "/services/dmk-enzyme-therapy.jpg",
         description:
           "Experience the ultimate in skin rejuvenation with our Hollywood Glow treatment, which combines DMK enzyme therapy and a luxurious lifting massage.",
         details: [
@@ -124,6 +130,7 @@ const servicesData = [
         name: "Microneedling",
         duration: "120 min",
         price: "$250",
+        image: "/services/microneedling.jpg",
         description:
           "A customized skin-rejuvenation treatment designed to improve texture, tone, and overall radiance. This procedure uses a microneedling device to create micro-channels in the skin, allowing advanced Forlle’d serums to penetrate deeply and work at the cellular level.",
         details: [
@@ -142,6 +149,7 @@ const servicesData = [
         name: "BIOPLASIA facial & harmony balance",
         duration: "120 min",
         price: "$280",
+        image: "/services/bioplasia.jpg",
         description:
           "Bioplasia combines deep facial sculpting, bioenergetic work, and a relaxing massage to enhance both outer beauty and inner well-being.",
         extra:
@@ -156,6 +164,7 @@ const servicesData = [
         name: "Cleansing Facial",
         duration: "120 min",
         price: "$160",
+        image: "/services/cleansing-facial.jpg",
         description: "The action of the procedure is aimed at:",
         details: [
           "Deep cleansing",
@@ -175,6 +184,7 @@ const servicesData = [
         name: "Dermaplaning",
         duration: "60 min",
         price: "$140",
+        image: "/services/dermaplaning.jpg",
         description:
           "A method of mechanical exfoliation that utilizes a medical-grade blade to gently “shave” the surface of the skin, removing the top layer of dead skin cells and vellus hair. It’s completely safe for even sensitive faces — and highly effective.",
         details: [
@@ -356,7 +366,15 @@ const servicesData = [
 
 function ServiceRow({ item }) {
   return (
-    <article className="service-row">
+    <article
+      className={`service-row ${item.image ? "service-row-has-image" : ""}`}
+    >
+      {item.image && (
+        <div className="service-row-image">
+          <img src={item.image} alt={item.name} />
+        </div>
+      )}
+
       <div className="service-row-left">
         <h3>{item.name}</h3>
 
