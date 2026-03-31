@@ -90,6 +90,7 @@ const servicesData = [
         name: "Signature Facial Care",
         duration: "90 min",
         price: "$180",
+        image: "/services/signature-facial.jpg",
         description:
           "A customized facial using premium Japanese skincare FORLLE'D, tailored to your skin’s unique needs for visible results and deep nourishment.",
         details: [
