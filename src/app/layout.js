@@ -69,7 +69,16 @@ export default function RootLayout({ children }) {
 
           <div className="footer-bottom">
             <div className="footer-bottom-inner container">
-              © 2026 Orlando Beauty Studio
+              <p>© 2026 Orlando Beauty Studio</p>
+
+              <a
+                href="https://onoprichukwebstudio.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-credit"
+              >
+                Website by Onoprichuk Web Studio
+              </a>
             </div>
           </div>
         </footer>
