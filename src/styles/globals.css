@@ -1,0 +1,354 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= THEME ================= */
+:root {
+  --bg: #f6f2ee;
+  --bg-2: #efe8e1;
+  --card: #f4f1ed;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --border: #e9e3dd;
+  --accent: #8d6a73;
+  --dark: #1a1a1a;
+}
+
+/* ================= BASE ================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.subtext {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* ================= HEADINGS ================= */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* ================= PAGE WRAP ================= */
+.page {
+  padding-top: 0;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1150px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+/* ================= LOGO ================= */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 102px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.nav-links a:hover {
+  opacity: 0.65;
+}
+
+.nav-cta {
+  background: var(--accent);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+
+.nav-cta:hover {
+  opacity: 0.85;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+  display: inline-block;
+  padding: 15px 38px;
+  background: var(--accent);
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: 0.25s ease;
+  border: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.25s ease;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ================= GENERIC PAGE HERO ================= */
+.page-hero {
+  padding: 110px 0;
+  background: var(--bg-2);
+}
+
+/* ================= CTA ================= */
+.cta {
+  padding: 110px 0;
+  text-align: center;
+  background: var(--bg);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 70px 0 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 18px 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  opacity: 0.8;
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 1500;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 85%;
+  max-width: 420px;
+  height: 100vh;
+  background: white;
+  padding: 60px 40px;
+  transition: 0.35s ease;
+  z-index: 2000;
+}
+
+.mobile-drawer.open {
+  left: 0;
+}
+
+.mobile-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 26px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.mobile-nav a {
+  font-size: 26px;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+}
+
+.mobile-booking {
+  display: block;
+  margin-top: 60px;
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 980px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .logo img {
+    height: 82px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .page-hero {
+    padding: 80px 0;
+  }
+
+  .cta {
+    padding: 80px 0;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-buttons .btn-primary,
+  .cta-buttons .btn-outline {
+    text-align: center;
+  }
+}

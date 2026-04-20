@@ -1,0 +1,116 @@
+/* ================= HOME HERO ================= */
+
+/* ================= HERO TEXT SECTION ================= */
+.hero-text-section {
+  background: #f3f1ef;
+  padding: 90px 20px 70px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-text-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 900px;
+}
+
+.hero-main-title {
+  font-family: "Playfair Display", serif;
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+.hero-main-title span {
+  display: block;
+}
+
+/* ================= HERO VIDEO ================= */
+.hero {
+  height: 66vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.16);
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-top-btn {
+  min-width: 220px;
+  text-align: center;
+}
+
+.top-space {
+  margin-top: 26px;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 980px) {
+  .hero-text-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-main-title {
+    font-size: 40px;
+  }
+
+  .hero {
+    height: 58vh;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hero-text-section {
+    padding: 60px 20px 50px;
+  }
+
+  .hero-main-title {
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero-overlay {
+    padding-bottom: 22px;
+  }
+
+  .hero-top-btn {
+    min-width: 100%;
+  }
+}

@@ -1,4 +1,12 @@
-import "./globals.css";
+import "../styles/globals.css";
+import "../styles/pages/beauty-school.css";
+import "../styles/pages/services.css";
+import "../styles/pages/gift-cards.css";
+import "../styles/pages/contact.css";
+import "../styles/pages/home-about.css";
+import "../styles/pages/home-reviews.css";
+import "../styles/pages/home-hero.css";
+
 import Navbar from "./Navbar";
 
 export const metadata = {
