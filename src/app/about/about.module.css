@@ -125,6 +125,7 @@
   display: block;
   border-radius: 24px;
   object-fit: contain;
+  background: #efe7de;
   box-shadow: 0 20px 50px rgba(26, 19, 15, 0.12);
 }
 
@@ -237,6 +238,10 @@
 }
 
 @media (max-width: 640px) {
+  .hero {
+    padding-top: 112px;
+  }
+
   .heroTitle {
     font-size: 2.6rem;
   }
@@ -249,16 +254,42 @@
     line-height: 1.8;
   }
 
+  .founderText h2,
+  .pressIntro h2,
+  .secondaryText h2 {
+    font-size: 2.2rem;
+    line-height: 1.12;
+  }
+
+  .founderImageWrap,
+  .secondaryImageWrap {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .founderImageWrap::before,
+  .secondaryImageWrap::before {
+    inset: -10px;
+    border-radius: 22px;
+  }
+
   .founderImage,
   .secondaryImage {
     width: 100%;
     height: auto;
     max-height: none;
-    object-fit: contain;
+    min-height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 18px;
   }
 
   .pressCard {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .pressAction {
+    white-space: normal;
   }
 }

@@ -90,6 +90,7 @@
   background: var(--accent);
   color: #fff;
   border-color: var(--accent);
+  box-shadow: 0 8px 18px rgba(141, 106, 115, 0.18);
 }
 
 .beauty-school-tab-panel {
@@ -113,13 +114,6 @@
   margin-top: 10px;
 }
 
-.beauty-school-course-section-divider {
-  margin-top: 84px;
-  padding-top: 60px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-/* old label row no longer used */
 .beauty-school-course-label-row,
 .beauty-school-course-label,
 .beauty-school-course-type {
@@ -666,21 +660,33 @@
   }
 
   .beauty-school-tabs {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-    max-width: 300px;
-    margin: 0 auto 24px;
+    display: flex;
+    gap: 10px;
+    margin: 0 0 24px;
+    padding: 0 4px 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .beauty-school-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .beauty-school-tab {
-    width: 100%;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 150px;
     text-align: center;
     padding: 10px 16px;
     font-size: 13px;
-    letter-spacing: 0.5px;
-    border-radius: 14px;
+    letter-spacing: 0.4px;
+    border-radius: 999px;
     min-height: 42px;
+    white-space: nowrap;
   }
 
   .beauty-school-tab-title {

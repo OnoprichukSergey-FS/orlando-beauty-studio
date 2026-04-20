@@ -251,7 +251,7 @@
 
   .about-visual {
     min-height: 500px;
-    max-width: 380px;
+    max-width: 360px;
   }
 
   .about-visual::before {
@@ -261,37 +261,38 @@
   }
 
   .about-main-image {
-    width: 80%;
+    width: 82%;
   }
 
   .about-main-image img,
   .about-main-video {
-    height: 430px;
+    height: 360px;
+    border-radius: 18px;
   }
 
   .about-secondary-image {
-    width: 38%;
-    bottom: 22px;
+    width: 34%;
+    bottom: 16px;
     left: -2px;
     padding: 6px;
     border-radius: 14px;
   }
 
   .about-secondary-image img {
-    height: 170px;
+    height: 120px;
     border-radius: 10px;
   }
 
   .about-third-image {
-    width: 31%;
-    top: 22px;
-    right: -4px;
+    width: 34%;
+    top: 18px;
+    right: -2px;
     padding: 6px;
     border-radius: 14px;
   }
 
   .about-third-image img {
-    height: 145px;
+    height: 120px;
     border-radius: 10px;
   }
 }
