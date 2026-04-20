@@ -666,12 +666,21 @@
   }
 
   .beauty-school-tabs {
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    max-width: 300px;
+    margin: 0 auto 24px;
   }
 
   .beauty-school-tab {
     width: 100%;
     text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border-radius: 14px;
+    min-height: 42px;
   }
 
   .beauty-school-tab-title {
