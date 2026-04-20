@@ -195,52 +195,6 @@
   color: #544e4a;
 }
 
-/* ================= COURSE OVERVIEW CARD ================= */
-
-.beauty-school-courses-overview {
-  margin-top: 40px;
-}
-
-.beauty-school-courses-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
-}
-
-.beauty-school-course-mini-card {
-  background: #f8f5f2;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 14px 32px rgba(26, 26, 26, 0.05);
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.beauty-school-course-mini-card img {
-  width: 100%;
-  height: 430px;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
-}
-
-.beauty-school-course-mini-content {
-  padding: 28px;
-}
-
-.beauty-school-course-mini-content h3 {
-  font-size: 30px;
-  line-height: 1.15;
-  margin-bottom: 14px;
-}
-
-.beauty-school-course-mini-content p {
-  color: #544e4a;
-  font-size: 16px;
-  line-height: 1.85;
-}
-
 /* ================= FEATURE IMAGE ================= */
 
 .beauty-school-feature {
@@ -636,7 +590,6 @@
   .beauty-school-hero-grid,
   .beauty-school-section-grid,
   .beauty-school-results-grid,
-  .beauty-school-courses-grid,
   .beauty-school-method-grid {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -654,7 +607,6 @@
   .beauty-school-cta-card h3,
   .beauty-school-video-text h3,
   .beauty-school-program-card h3,
-  .beauty-school-course-mini-content h3,
   .beauty-school-method-text h3 {
     font-size: 32px;
   }
@@ -730,12 +682,33 @@
     padding: 8px 0 18px;
   }
 
+  .beauty-school-hero-grid,
+  .beauty-school-section-grid,
+  .beauty-school-section-grid.reverse,
+  .beauty-school-results-grid,
+  .beauty-school-method-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
   .beauty-school-hero-visual img {
     height: 280px;
     border-radius: 18px;
   }
 
-  .beauty-school-course-mini-card,
+  .beauty-school-section-text h3,
+  .beauty-school-results-text h3,
+  .beauty-school-intro-card h3,
+  .beauty-school-note-card h3,
+  .beauty-school-cta-card h3,
+  .beauty-school-program-card h3,
+  .beauty-school-video-text h3,
+  .beauty-school-method-text h3,
+  .beauty-school-category-intro h2 {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+
   .beauty-school-video-card,
   .beauty-school-program-card,
   .beauty-school-intro-card,
@@ -747,11 +720,6 @@
     border-radius: 18px;
   }
 
-  .beauty-school-course-mini-card img {
-    height: 250px;
-  }
-
-  .beauty-school-course-mini-content,
   .beauty-school-video-card,
   .beauty-school-program-card,
   .beauty-school-intro-card,
@@ -800,6 +768,12 @@
     gap: 16px;
   }
 
+  .beauty-school-method-image-card,
+  .beauty-school-method-video-card {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
   .beauty-school-method-image-card img {
     height: 260px;
   }
@@ -808,9 +782,31 @@
     max-height: 420px;
   }
 
+  .beauty-school-section-image {
+    justify-content: center;
+  }
+
   .beauty-school-section-image img {
+    width: 100%;
+    max-width: 100%;
     height: 260px;
     border-radius: 18px;
+  }
+
+  .circle-image {
+    justify-content: center;
+  }
+
+  .circle-image img {
+    width: 220px;
+    height: 220px;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .beauty-school-list-block {
+    margin-top: 18px;
+    padding: 18px;
   }
 
   .beauty-school-results-images img:first-child,
