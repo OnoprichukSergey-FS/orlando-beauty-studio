@@ -293,7 +293,7 @@ export default function BeautySchoolPage() {
                       <p className="beauty-school-small-heading">
                         About the Method
                       </p>
-                      <h3>Signature Sculpting Method by J.Ratnikova</h3>
+                      <h3>How the Method Works</h3>
 
                       <p>
                         The Signature Sculpting Method was developed by Yulia
