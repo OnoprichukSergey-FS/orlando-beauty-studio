@@ -124,11 +124,11 @@ export default function BeautySchoolPage() {
                     <h3>About Hollywood Lifting</h3>
                     <p>
                       Hollywood Lifting is the main signature training currently
-                      taught by Yulia and remains a central educational focus of
+                      taught by Julia and remains a central educational focus of
                       the school.
                     </p>
                     <p>
-                      In 2025, Yulia conducted training in Orlando, sharing this
+                      In 2025, Julia conducted training in Orlando, sharing this
                       method with students who wanted to deepen their knowledge
                       of natural facial lifting, holistic skin work, and
                       advanced manual techniques.
@@ -296,7 +296,7 @@ export default function BeautySchoolPage() {
                       <h3>How the Method Works</h3>
 
                       <p>
-                        The Signature Sculpting Method was developed by Yulia
+                        The Signature Sculpting Method was developed by Julia
                         Ratnikova through years of hands-on practice, advanced
                         training, and a refined technique she applies in her
                         work with clients and teaches to her students.
