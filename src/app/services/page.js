@@ -19,7 +19,7 @@ const servicesData = [
       {
         name: "Hollywood Lifting Massage",
         duration: "90 min",
-        price: "$160",
+        price: "$180",
         image: "/services/hollywood-lifting-massage.jpg",
         description:
           "A signature sculpting treatment designed to lift, tone, and restore natural facial structure. This treatment includes deep work on the face, neck, and décolleté, combining lifting techniques, lymphatic drainage, and targeted muscle and fascia release.",
@@ -39,7 +39,7 @@ const servicesData = [
       {
         name: "Hollywood Lifting Ritual",
         duration: "135 min",
-        price: "$220",
+        price: "$280",
         image: "/services/hollywood-lifting-ritual.jpg",
         description:
           "A complete lifting ritual designed to deeply sculpt, renew, and restore your skin. This advanced treatment combines our signature Hollywood Lifting Massage with professional skincare steps for maximum visible results and long-lasting glow.",
