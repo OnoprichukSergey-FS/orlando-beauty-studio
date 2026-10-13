@@ -1,3 +1,7 @@
+/* =====================================================
+   ORLANDO BEAUTY STUDIO — SERVICES PAGE
+   ===================================================== */
+
 /* ================= SERVICES PAGE ================= */
 
 .services-page {
@@ -62,6 +66,54 @@
   box-shadow: 0 18px 40px rgba(25, 20, 18, 0.06);
 }
 
+/* ================= MASSAGE TABS ================= */
+
+.massage-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 65px auto 45px;
+}
+
+.massage-tab {
+  min-width: 220px;
+  padding: 17px 28px;
+  background: transparent;
+  color: #766a66;
+  border: 1px solid #cbbdb7;
+  border-radius: 40px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.massage-tab:hover {
+  background: #e9dfda;
+  color: #493e3a;
+  transform: translateY(-2px);
+}
+
+.massage-tab.active {
+  background: #8d6a73;
+  color: #ffffff;
+  border-color: #8d6a73;
+}
+
+.massage-tab.active:hover {
+  background: #795861;
+}
+
+.massage-tab:focus-visible {
+  outline: 2px solid #8d6a73;
+  outline-offset: 4px;
+}
+
 /* ================= SERVICE LIST ================= */
 
 .services-sections {
@@ -102,7 +154,7 @@
   padding-bottom: 0;
 }
 
-/* ================= ROW WITH IMAGE ================= */
+/* ================= SERVICE ROW WITH IMAGE ================= */
 
 .service-row-has-image {
   grid-template-columns: 285px minmax(0, 1fr) 120px;
@@ -112,6 +164,7 @@
 
 .service-row-image {
   width: 100%;
+  min-width: 0;
 }
 
 .service-row-image img {
@@ -170,7 +223,7 @@
   color: #5d5753;
 }
 
-/* ================= RIGHT (PRICE / TIME) ================= */
+/* ================= RIGHT — PRICE / TIME ================= */
 
 .service-row-right {
   display: flex;
@@ -196,7 +249,74 @@
   white-space: nowrap;
 }
 
-/* ================= TABLET ================= */
+/* =====================================================
+   NEW BODY MASSAGE SERVICES
+   EXHALE, RESTORE, FOCUSED
+   ===================================================== */
+
+/* EXHALE and RESTORE have two pricing options,
+   so they only need an image and content column. */
+
+.service-row-has-image:has(.body-massage-options) {
+  grid-template-columns: 285px minmax(0, 1fr);
+  gap: 35px;
+  align-items: start;
+}
+
+/* Body massage images */
+
+.service-row-has-image:has(.body-massage-options) .service-row-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+/* ================= BODY MASSAGE PRICING ================= */
+
+.body-massage-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 24px;
+}
+
+.body-massage-option {
+  padding: 18px 20px;
+  border: 1px solid rgba(155, 123, 82, 0.12);
+  border-radius: 12px;
+  background: #ebe4df;
+}
+
+.body-option-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.body-option-heading strong {
+  font-size: 15px;
+  color: #39302c;
+}
+
+.body-option-heading span {
+  font-size: 24px;
+  color: #8d6a73;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.body-massage-option p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #6d625d;
+  margin: 0;
+}
+
+/* ================= SMALL DESKTOP / TABLET ================= */
 
 @media (max-width: 980px) {
   .services-hero h1 {
@@ -217,9 +337,16 @@
     gap: 18px;
   }
 
-  .service-row-image img {
+  .service-row-has-image:has(.body-massage-options) {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-row-image img,
+  .service-row-has-image:has(.body-massage-options) .service-row-image img {
     height: auto;
     aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
   .service-row-left h3 {
@@ -234,11 +361,17 @@
   .packages-image {
     max-width: 360px;
   }
+
+  .massage-tabs {
+    margin-top: 50px;
+  }
 }
 
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
+  /* Main layout */
+
   .services-page {
     padding: 64px 0 84px;
   }
@@ -246,6 +379,8 @@
   .services-container {
     width: 92%;
   }
+
+  /* Hero */
 
   .services-hero {
     padding: 4px 0 10px;
@@ -263,6 +398,23 @@
     max-width: 100%;
   }
 
+  /* Face and body tabs */
+
+  .massage-tabs {
+    gap: 10px;
+    margin: 40px auto 30px;
+  }
+
+  .massage-tab {
+    min-width: 0;
+    flex: 1;
+    padding: 15px 12px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Packages */
+
   .packages-section {
     margin: 34px auto 46px;
   }
@@ -271,6 +423,8 @@
     max-width: 88%;
     border-radius: 20px;
   }
+
+  /* Service categories */
 
   .service-category {
     margin-top: 38px;
@@ -287,21 +441,30 @@
     gap: 18px;
   }
 
+  /* Service cards */
+
   .service-row,
-  .service-row-has-image {
+  .service-row-has-image,
+  .service-row-has-image:has(.body-massage-options) {
     display: flex;
     flex-direction: column;
     gap: 0;
     padding: 0;
-    border-bottom: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     background: #f8f5f1;
-    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 24px rgba(22, 18, 16, 0.04);
   }
 
-  .service-row-image img {
+  /* Images */
+
+  .service-row-image {
+    width: 100%;
+  }
+
+  .service-row-image img,
+  .service-row-has-image:has(.body-massage-options) .service-row-image img {
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 3;
@@ -310,7 +473,10 @@
     box-shadow: none;
   }
 
+  /* Content */
+
   .service-row-left {
+    width: 100%;
     padding: 18px 18px 8px;
   }
 
@@ -337,19 +503,82 @@
     font-size: 14px;
   }
 
+  /* Regular service prices */
+
   .service-row-right {
-    padding: 0 18px 18px;
+    width: 100%;
+    padding: 14px 18px 18px;
     margin-top: 4px;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+    gap: 12px;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
 
   .service-duration {
     font-size: 13px;
+    margin-bottom: 0;
   }
 
   .service-price {
     font-size: 24px;
+  }
+
+  /* Body massage price cards */
+
+  .body-massage-options {
+    margin-top: 18px;
+    margin-bottom: 12px;
+  }
+
+  .body-massage-option {
+    padding: 15px;
+  }
+
+  .body-option-heading strong {
+    font-size: 14px;
+  }
+
+  .body-option-heading span {
+    font-size: 22px;
+  }
+
+  .body-massage-option p {
+    font-size: 13px;
+  }
+}
+
+/* ================= EXTRA SMALL SCREENS ================= */
+
+@media (max-width: 380px) {
+  .services-hero h1 {
+    font-size: 36px;
+  }
+
+  .massage-tabs {
+    gap: 8px;
+  }
+
+  .massage-tab {
+    padding: 13px 8px;
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+
+  .body-option-heading span {
+    font-size: 20px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .massage-tab {
+    transition: none;
+  }
+
+  .massage-tab:hover {
+    transform: none;
   }
 }

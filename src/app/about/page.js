@@ -18,7 +18,7 @@ export default function AboutPage() {
       <section className={styles.founderSection}>
         <div className={`${styles.container} ${styles.founderGrid}`}>
           <div className={styles.founderText}>
-            <p className={styles.eyebrow}>Founder & Holistic expert</p>
+            <p className={styles.eyebrow}>Founder & Holistic Expert</p>
             <h2>Beauty approached through deeper understanding</h2>
 
             <p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             </a>
 
             <a
-              href="https://orlandovoyager.com/interview/community-highlights-meet-julia-ratnikova-of-orlando-beauty-studio/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAP13n9leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacNzMXUr-X1FTaXZdIgj-ccsYRgrFeeu0p8m0f_d91K0_VIas8ZTnC6CZ0cNA_aem_QO4BjvV6mFuIx7giQ_bW9w"
+              href="https://orlandovoyager.com/interview/community-highlights-meet-julia-ratnikova-of-orlando-beauty-studio/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.pressCard}
@@ -125,9 +125,50 @@ export default function AboutPage() {
           <div className={styles.secondaryImageWrap}>
             <img
               src="/yulia-about.jpg"
-              alt="Yulia Tereshchuk, creative director of Orlando Beauty Studio"
+              alt="Yulia Tereshchuk, creative director"
               className={styles.secondaryImage}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* MEET ANA */}
+      <section className={styles.anaSection}>
+        <div className={`${styles.container} ${styles.anaGrid}`}>
+          <div className={styles.anaImageWrap}>
+            <img
+              src="/ana-about.jpg"
+              alt="Ana, massage therapist at Orlando Beauty Studio"
+              className={styles.anaImage}
+            />
+          </div>
+
+          <div className={styles.anaText}>
+            <p className={styles.eyebrow}>Therapeutic Bodywork & Massage</p>
+
+            <h2>Meet Ana</h2>
+
+            <p>
+              Ana believes massage should meet you where you are — whether
+              you’re looking for focused relief in a specific area, a deeper
+              full-body release, or simply time to slow down and reset.
+            </p>
+
+            <p>
+              Her sessions blend targeted therapeutic work, including myofascial
+              techniques, with calming, restorative touch. When appropriate, she
+              incorporates breathwork and sound to deepen relaxation and help
+              the body settle.
+            </p>
+
+            <p>
+              Her intention is to provide thoughtful, individualized bodywork
+              that leaves you feeling lighter, grounded, and cared for.
+            </p>
+
+            <a href="/services" className={styles.anaButton}>
+              Explore Body Massage
+            </a>
           </div>
         </div>
       </section>

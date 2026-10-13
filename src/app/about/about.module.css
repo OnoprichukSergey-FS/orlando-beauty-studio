@@ -1,3 +1,5 @@
+/* ================= ABOUT PAGE ================= */
+
 .aboutPage {
   background: #f8f3ed;
   color: #1f1a17;
@@ -16,12 +18,17 @@
   text-transform: uppercase;
 }
 
+/* ================= SECTION SPACING ================= */
+
 .hero,
 .founderSection,
 .pressSection,
-.secondarySection {
+.secondarySection,
+.anaSection {
   padding: 100px 0;
 }
+
+/* ================= HERO ================= */
 
 .hero {
   padding-top: 150px;
@@ -54,6 +61,8 @@
   color: #4f453d;
 }
 
+/* ================= JULIA SECTION ================= */
+
 .founderGrid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -70,29 +79,24 @@
   color: #181311;
 }
 
-.secondaryText h2 {
-  margin: 0 0 20px;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-  line-height: 1.12;
-  color: #181311;
-}
-
 .founderText p,
 .pressIntro p,
-.secondaryText p {
+.secondaryText p,
+.anaText p {
   color: #4f453d;
   font-size: 1.04rem;
   line-height: 1.9;
 }
 
 .founderText p,
-.secondaryText p {
+.secondaryText p,
+.anaText p {
   margin-bottom: 18px;
 }
 
 .founderImageWrap,
-.secondaryImageWrap {
+.secondaryImageWrap,
+.anaImageWrap {
   position: relative;
 }
 
@@ -102,14 +106,9 @@
   justify-self: end;
 }
 
-.secondaryImageWrap {
-  max-width: 430px;
-  width: 100%;
-  justify-self: center;
-}
-
 .founderImageWrap::before,
-.secondaryImageWrap::before {
+.secondaryImageWrap::before,
+.anaImageWrap::before {
   content: "";
   position: absolute;
   inset: -16px;
@@ -119,7 +118,8 @@
 }
 
 .founderImage,
-.secondaryImage {
+.secondaryImage,
+.anaImage {
   width: 100%;
   height: auto;
   display: block;
@@ -129,14 +129,11 @@
   box-shadow: 0 20px 50px rgba(26, 19, 15, 0.12);
 }
 
-/* keep desktop image size elegant without cropping */
 .founderImage {
   max-height: 680px;
 }
 
-.secondaryImage {
-  max-height: 560px;
-}
+/* ================= PRESS SECTION ================= */
 
 .pressSection {
   background: #f2ebe3;
@@ -186,6 +183,8 @@
   white-space: nowrap;
 }
 
+/* ================= YULIA SECTION ================= */
+
 .secondarySection {
   background: #f5efe8;
 }
@@ -197,6 +196,108 @@
   align-items: center;
 }
 
+.secondaryText h2 {
+  margin: 0 0 20px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  line-height: 1.12;
+  color: #181311;
+}
+
+.secondaryImageWrap {
+  max-width: 430px;
+  width: 100%;
+  justify-self: center;
+}
+
+.secondaryImage {
+  max-height: 560px;
+}
+
+/* ================= ANA SECTION ================= */
+
+.anaSection {
+  background: #f8f3ed;
+}
+
+.anaGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.anaImageWrap {
+  max-width: 470px;
+  width: 100%;
+  justify-self: center;
+}
+
+.anaImage {
+  max-height: 650px;
+  object-fit: contain;
+}
+
+.anaText {
+  max-width: 590px;
+}
+
+.anaText h2 {
+  margin: 0 0 25px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.4rem, 4.6vw, 4rem);
+  font-weight: 400;
+  line-height: 1.08;
+  color: #181311;
+}
+
+.anaText p {
+  margin-bottom: 20px;
+}
+
+.anaText .eyebrow {
+  color: #9b7b52;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+/* ================= ANA BUTTON ================= */
+
+.anaButton {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 16px 30px;
+  border: 1px solid #8d6a73;
+  border-radius: 30px;
+  background: #8d6a73;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.anaButton:hover {
+  background: #76545e;
+  border-color: #76545e;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(26, 19, 15, 0.1);
+}
+
+.anaButton:focus-visible,
+.pressCard:focus-visible {
+  outline: 2px solid #9b7b52;
+  outline-offset: 4px;
+}
+
+/* ================= SMALL DESKTOP ================= */
+
 @media (max-width: 1100px) {
   .founderImage {
     max-height: 620px;
@@ -205,37 +306,68 @@
   .secondaryImage {
     max-height: 500px;
   }
+
+  .anaImage {
+    max-height: 570px;
+  }
+
+  .anaGrid {
+    gap: 55px;
+  }
 }
+
+/* ================= TABLET ================= */
 
 @media (max-width: 980px) {
   .hero,
   .founderSection,
   .pressSection,
-  .secondarySection {
+  .secondarySection,
+  .anaSection {
     padding: 80px 0;
-  }
-
-  .founderGrid,
-  .secondaryGrid,
-  .pressGrid {
-    grid-template-columns: 1fr;
   }
 
   .hero {
     padding-top: 130px;
   }
 
+  .founderGrid,
+  .secondaryGrid,
+  .anaGrid,
+  .pressGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .founderGrid,
+  .secondaryGrid,
+  .anaGrid {
+    gap: 48px;
+  }
+
   .founderImageWrap,
-  .secondaryImageWrap {
+  .secondaryImageWrap,
+  .anaImageWrap {
     max-width: 100%;
     justify-self: stretch;
   }
 
   .founderImage,
-  .secondaryImage {
+  .secondaryImage,
+  .anaImage {
     max-height: none;
   }
+
+  .anaImageWrap {
+    max-width: 560px;
+    justify-self: center;
+  }
+
+  .anaText {
+    max-width: 100%;
+  }
 }
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 640px) {
   .hero {
@@ -249,38 +381,48 @@
   .heroText,
   .founderText p,
   .pressIntro p,
-  .secondaryText p {
+  .secondaryText p,
+  .anaText p {
     font-size: 1rem;
     line-height: 1.8;
   }
 
   .founderText h2,
   .pressIntro h2,
-  .secondaryText h2 {
+  .secondaryText h2,
+  .anaText h2 {
     font-size: 2.2rem;
     line-height: 1.12;
   }
 
+  .founderGrid,
+  .secondaryGrid,
+  .anaGrid {
+    gap: 36px;
+  }
+
   .founderImageWrap,
-  .secondaryImageWrap {
+  .secondaryImageWrap,
+  .anaImageWrap {
     max-width: 100%;
     width: 100%;
   }
 
   .founderImageWrap::before,
-  .secondaryImageWrap::before {
+  .secondaryImageWrap::before,
+  .anaImageWrap::before {
     inset: -10px;
     border-radius: 22px;
   }
 
   .founderImage,
-  .secondaryImage {
+  .secondaryImage,
+  .anaImage {
     width: 100%;
     height: auto;
     max-height: none;
-    min-height: 280px;
-    object-fit: cover;
-    object-position: center top;
+    min-height: 0;
+    object-fit: contain;
     border-radius: 18px;
   }
 
@@ -291,5 +433,18 @@
 
   .pressAction {
     white-space: normal;
+  }
+
+  .anaButton {
+    width: 100%;
+    text-align: center;
+    padding: 16px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pressCard,
+  .anaButton {
+    transition: none;
   }
 }

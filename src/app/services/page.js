@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const servicesData = [
   {
     category: "Hollywood Method Lift Up Facial Massage",
@@ -365,6 +369,103 @@ const servicesData = [
   },
 ];
 
+/* ================= BODY MASSAGE DATA ================= */
+
+const bodyMassageData = [
+  {
+    category: "Body Massage",
+    items: [
+      {
+        name: "EXHALE — Relaxing Body Massage",
+        image: "/services/exhale-massage.jpg",
+        options: [
+          {
+            duration: "60 min",
+            price: "$130",
+            description:
+              "A full-body session for overall relaxation and relief from everyday tension.",
+          },
+          {
+            duration: "90 min",
+            price: "$180",
+            description:
+              "An extended full-body session with extra time for areas that need more attention.",
+          },
+        ],
+        description:
+          "A soothing full-body massage with slow, flowing movements to ease everyday tension and help you unwind. Pressure is adjusted to your comfort, with optional warm towels and aromatherapy to complete the experience.",
+      },
+      {
+        name: "RESTORE — Targeted Body Massage",
+        image: "/services/restore-massage.jpg",
+        options: [
+          {
+            duration: "60 min",
+            price: "$130",
+            description: "Focused work on your main areas of concern.",
+          },
+          {
+            duration: "90 min",
+            price: "$180",
+            description:
+              "More time to address several areas and work thoroughly with persistent tension.",
+          },
+        ],
+        description:
+          "A personalized massage focused on areas of muscle tightness and discomfort. Myofascial techniques, gentle stretching, and compression help ease tension and support comfortable movement. Each session is tailored to your needs, with pressure adjusted throughout.",
+      },
+      {
+        name: "FOCUSED — Zone Massage",
+        image: "/services/focused-massage.jpg",
+        duration: "45 min",
+        price: "$90",
+        description:
+          "A targeted session dedicated to the areas that need attention most—such as your back, neck, and shoulders, or your legs and feet. Your therapist adapts the techniques and pressure to your preferences, allowing the full session to focus on your chosen zones.",
+      },
+    ],
+  },
+];
+
+/* ================= BODY MASSAGE ROW ================= */
+
+function BodyMassageRow({ item }) {
+  return (
+    <article className="service-row service-row-has-image">
+      <div className="service-row-image">
+        <img src={item.image} alt={item.name} />
+      </div>
+
+      <div className="service-row-left">
+        <h3>{item.name}</h3>
+
+        <p className="service-description">{item.description}</p>
+
+        {item.options && (
+          <div className="body-massage-options">
+            {item.options.map((option) => (
+              <div className="body-massage-option" key={option.duration}>
+                <div className="body-option-heading">
+                  <strong>{option.duration}</strong>
+                  <span>{option.price}</span>
+                </div>
+
+                <p>{option.description}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {!item.options && (
+        <div className="service-row-right">
+          <p className="service-duration">{item.duration}</p>
+          <p className="service-price">{item.price}</p>
+        </div>
+      )}
+    </article>
+  );
+}
+
 function ServiceRow({ item }) {
   return (
     <article
@@ -405,15 +506,24 @@ function ServiceRow({ item }) {
 }
 
 export default function ServicesPage() {
+  const [activeTab, setActiveTab] = useState("face");
+
+  const activeServices = activeTab === "face" ? servicesData : bodyMassageData;
+
   return (
     <section className="services-page">
       <div className="container services-container">
+        {/* HERO */}
+
         <div className="services-hero center">
           <p className="services-kicker">Our Treatments</p>
+
           <h1>Services</h1>
+
           <p className="subtext services-subtext">
-            Explore our facial, skincare, and specialty treatments. Book
-            directly through Vagaro when you&apos;re ready.
+            Discover treatments designed to restore balance, release tension,
+            and enhance your natural beauty. Choose from our facial treatments
+            or therapeutic body massage experiences.
           </p>
 
           <div className="top-space">
@@ -428,23 +538,70 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        <div className="packages-section">
-          <img
-            src="/packages.jpg"
-            alt="Treatment Packages"
-            className="packages-image"
-          />
+        {/* SERVICE TABS */}
+
+        <div
+          className="massage-tabs"
+          role="tablist"
+          aria-label="Service categories"
+        >
+          <button
+            type="button"
+            role="tab"
+            id="face-tab"
+            aria-selected={activeTab === "face"}
+            aria-controls="services-panel"
+            className={`massage-tab ${activeTab === "face" ? "active" : ""}`}
+            onClick={() => setActiveTab("face")}
+          >
+            Face Massage
+          </button>
+
+          <button
+            type="button"
+            role="tab"
+            id="body-tab"
+            aria-selected={activeTab === "body"}
+            aria-controls="services-panel"
+            className={`massage-tab ${activeTab === "body" ? "active" : ""}`}
+            onClick={() => setActiveTab("body")}
+          >
+            Body Massage
+          </button>
         </div>
 
-        <div className="services-sections">
-          {servicesData.map((section) => (
+        {/* FACE PACKAGES IMAGE */}
+
+        {activeTab === "face" && (
+          <div className="packages-section">
+            <img
+              src="/packages.jpg"
+              alt="Treatment Packages"
+              className="packages-image"
+            />
+          </div>
+        )}
+
+        {/* SERVICE LIST */}
+
+        <div
+          className="services-sections"
+          id="services-panel"
+          role="tabpanel"
+          aria-labelledby={activeTab === "face" ? "face-tab" : "body-tab"}
+        >
+          {activeServices.map((section) => (
             <section className="service-category" key={section.category}>
               <h2>{section.category}</h2>
 
               <div className="service-rows">
-                {section.items.map((item) => (
-                  <ServiceRow key={item.name} item={item} />
-                ))}
+                {section.items.map((item) =>
+                  activeTab === "body" ? (
+                    <BodyMassageRow key={item.name} item={item} />
+                  ) : (
+                    <ServiceRow key={item.name} item={item} />
+                  )
+                )}
               </div>
             </section>
           ))}
