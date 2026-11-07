@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Reviews from "../components/Reviews";
 
 export default function Home() {
@@ -103,6 +105,74 @@ export default function Home() {
 
       {/* ================= REVIEWS ================= */}
       <Reviews />
+
+      {/* ================= TREATMENT FINDER ================= */}
+      <section
+        className="treatment-finder"
+        style={{
+          backgroundColor: "#f8f5f0",
+          padding: "80px 20px",
+          textAlign: "center",
+        }}
+      >
+        <div
+          className="container"
+          style={{
+            maxWidth: "800px",
+            margin: "0 auto",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "13px",
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+              marginBottom: "20px",
+              color: "#8b7355",
+            }}
+          >
+            PERSONALIZED BEAUTY EXPERIENCE
+          </p>
+
+          <h2
+            style={{
+              fontSize: "clamp(28px, 4vw, 42px)",
+              fontWeight: "500",
+              marginBottom: "20px",
+              color: "#252525",
+            }}
+          >
+            Not Sure What to Book?
+          </h2>
+
+          <p
+            style={{
+              fontSize: "17px",
+              lineHeight: "1.8",
+              color: "#666",
+              maxWidth: "550px",
+              margin: "0 auto 35px",
+            }}
+          >
+            Every face is unique. Answer two simple questions and let us guide
+            you toward the treatment that best matches your beauty goals.
+          </p>
+
+          <Link href="/treatment-quiz" className="btn-primary">
+            Find Your Treatment
+          </Link>
+
+          <p
+            style={{
+              fontSize: "13px",
+              color: "#888",
+              marginTop: "20px",
+            }}
+          >
+            Takes less than 30 seconds · No registration required
+          </p>
+        </div>
+      </section>
 
       {/* ================= CTA ================= */}
       <section className="cta">

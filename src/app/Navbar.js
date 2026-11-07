@@ -26,9 +26,12 @@ export default function Navbar() {
           <nav className="nav-links">
             <Link href="/about">About</Link>
             <Link href="/services">Services</Link>
+
+            {/* TREATMENT FINDER */}
+            <Link href="/treatment-quiz">Find Your Treatment</Link>
+
             <Link href="/gift-cards">Gift Cards</Link>
             <Link href="/beauty-school">Beauty School</Link>
-
             <Link href="/contact">Contact</Link>
           </nav>
 
@@ -43,7 +46,12 @@ export default function Navbar() {
           </a>
 
           {/* MOBILE MENU BUTTON */}
-          <button className="mobile-menu-btn" onClick={() => setMenuOpen(true)}>
+          <button
+            type="button"
+            className="mobile-menu-btn"
+            aria-label="Open navigation menu"
+            onClick={() => setMenuOpen(true)}
+          >
             ☰
           </button>
         </div>
@@ -57,7 +65,12 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div className={`mobile-drawer ${menuOpen ? "open" : ""}`}>
-        <button className="mobile-close" onClick={() => setMenuOpen(false)}>
+        <button
+          type="button"
+          className="mobile-close"
+          aria-label="Close navigation menu"
+          onClick={() => setMenuOpen(false)}
+        >
           ✕
         </button>
 
@@ -65,12 +78,20 @@ export default function Navbar() {
           <Link href="/about" onClick={() => setMenuOpen(false)}>
             About
           </Link>
+
           <Link href="/services" onClick={() => setMenuOpen(false)}>
             Services
           </Link>
+
+          {/* TREATMENT FINDER - MOBILE */}
+          <Link href="/treatment-quiz" onClick={() => setMenuOpen(false)}>
+            Find Your Treatment
+          </Link>
+
           <Link href="/gift-cards" onClick={() => setMenuOpen(false)}>
             Gift Cards
           </Link>
+
           <Link href="/beauty-school" onClick={() => setMenuOpen(false)}>
             Beauty School
           </Link>
@@ -80,11 +101,13 @@ export default function Navbar() {
           </Link>
         </nav>
 
+        {/* MOBILE BOOKING BUTTON */}
         <a
           href="https://www.vagaro.com/juliabeauty"
           target="_blank"
           rel="noopener noreferrer"
           className="mobile-booking"
+          onClick={() => setMenuOpen(false)}
         >
           Online Booking
         </a>
